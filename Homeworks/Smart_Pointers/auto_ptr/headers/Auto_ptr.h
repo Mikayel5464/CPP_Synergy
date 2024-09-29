@@ -6,7 +6,7 @@ class AutoPtr {
     public:
         explicit AutoPtr(T* ptr = nullptr);
         AutoPtr(AutoPtr& other);
-        AutoPtr& operator=(AutoPtr& other);
+		AutoPtr& operator=(AutoPtr& other);
         T& operator*() const;
         T* operator->() const;
         ~AutoPtr();
