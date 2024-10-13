@@ -1,6 +1,5 @@
 #include <iostream>
 
-void swap(int&, int&);
 void arrayPrint(int*, size_t);
 void insertionSort(int*, size_t);
 
@@ -17,12 +16,6 @@ int main() {
     arrayPrint(array, size);
     
     return 0;
-}
-
-void swap(int& a, int& b) {
-    int tmp = a;
-    a = b;
-    b = tmp;
 }
 
 void arrayPrint(int* arr, size_t size) {
