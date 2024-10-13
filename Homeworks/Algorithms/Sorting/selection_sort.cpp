@@ -34,6 +34,14 @@ void arrayPrint(int* arr, size_t size) {
 }
 
 void selectionSort(int* arr, size_t size) {
+	if (size <= 0) {
+        return;
+    }
+
+    if (arr == nullptr) {
+        return;
+    }
+	
 	for (int i = 0; i < size - 1; ++i) {
 		int min_index = i;
 

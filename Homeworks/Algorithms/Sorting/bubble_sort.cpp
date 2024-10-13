@@ -1,8 +1,8 @@
 #include <iostream>
 
 void swap(int&, int&);
-void bubbleSort(int*, size_t);
 void arrayPrint(int*, size_t);
+void bubbleSort(int*, size_t);
 
 int main() {
 	int array[] = {7, 4, 23, 54, 20, 40, 0};
@@ -25,7 +25,23 @@ void swap(int& a, int& b) {
 	b = tmp;
 }
 
+void arrayPrint(int* arr, size_t size) {
+	for (int i = 0; i < size; ++i) {
+		std::cout << arr[i] << " ";
+	}
+
+	std::cout << std::endl;
+}
+
 void bubbleSort(int* arr, size_t size) {
+	if (size <= 0) {
+        return;
+    }
+
+    if (arr == nullptr) {
+        return;
+    }
+
 	for (int i = 0; i < size - 1; ++i) {
 		bool is_swapped = false;
 
@@ -41,12 +57,4 @@ void bubbleSort(int* arr, size_t size) {
 			break;
 		}
 	}
-}
-
-void arrayPrint(int* arr, size_t size) {
-	for (int i = 0; i < size; ++i) {
-		std::cout << arr[i] << " ";
-	}
-
-	std::cout << std::endl;
 }
