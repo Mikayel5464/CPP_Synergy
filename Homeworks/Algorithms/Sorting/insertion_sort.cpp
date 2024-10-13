@@ -2,7 +2,7 @@
 #include <vector>
 
 template <typename T>
-void arrayPrint(const std::vector<T>& arr, size_t size) {
+void arrayPrint(const std::vector<T>& arr, const size_t size) {
     for (int i = 0; i < size; ++i) {
         std::cout << arr[i] << " ";
     }
@@ -11,7 +11,7 @@ void arrayPrint(const std::vector<T>& arr, size_t size) {
 }
 
 template <typename T>
-void insertionSort(std::vector<T>& arr, size_t size) {
+void insertionSort(std::vector<T>& arr, const size_t size) {
     for (int i = 1; i < size; ++i) {
         int key = arr[i];
         int j = i - 1;
