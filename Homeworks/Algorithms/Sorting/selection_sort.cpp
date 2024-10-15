@@ -9,8 +9,8 @@ void swap(T& a, T& b) {
 }
 
 template <typename T>
-void arrayPrint(const std::vector<T>& arr, const size_t size) {
-	for (int i = 0; i < size; ++i) {
+void arrayPrint(const std::vector<T>& arr) {
+	for (int i = 0; i < arr.size(); ++i) {
 		std::cout << arr[i] << " ";
 	}
 
@@ -18,11 +18,11 @@ void arrayPrint(const std::vector<T>& arr, const size_t size) {
 }
 
 template <typename T>
-void selectionSort(std::vector<T>& arr, const size_t size) {
-	for (int i = 0; i < size - 1; ++i) {
+void selectionSort(std::vector<T>& arr) {
+	for (int i = 0; i < arr.size() - 1; ++i) {
 		int min_index = i;
 
-		for (int j = i + 1; j < size; ++j) {
+		for (int j = i + 1; j < arr.size(); ++j) {
 			if (arr[j] < arr[min_index]) {
 				min_index = j;
 			}
@@ -34,15 +34,14 @@ void selectionSort(std::vector<T>& arr, const size_t size) {
 
 int main() {
 	std::vector<int> array{5, 6, 11, 2, 21, 9};
-	const size_t arr_size = array.size();
-
+	
 	std::cout << "Not sorted array: ";
-	arrayPrint(array, arr_size);
+	arrayPrint(array);
 
-	selectionSort(array, arr_size);
+	selectionSort(array);
 
 	std::cout << "Sorted array: ";
-	arrayPrint(array, arr_size);
+	arrayPrint(array);
 	
 	return 0;
 }

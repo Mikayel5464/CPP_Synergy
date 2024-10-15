@@ -2,8 +2,8 @@
 #include <vector>
 
 template <typename T>
-void arrayPrint(const std::vector<T>& arr, const size_t size) {
-    for (int i = 0; i < size; ++i) {
+void arrayPrint(const std::vector<T>& arr) {
+    for (int i = 0; i < arr.size(); ++i) {
         std::cout << arr[i] << " ";
     }
 
@@ -11,8 +11,8 @@ void arrayPrint(const std::vector<T>& arr, const size_t size) {
 }
 
 template <typename T>
-void insertionSort(std::vector<T>& arr, const size_t size) {
-    for (int i = 1; i < size; ++i) {
+void insertionSort(std::vector<T>& arr) {
+    for (int i = 1; i < arr.size(); ++i) {
         int key = arr[i];
         int j = i - 1;
 
@@ -27,15 +27,14 @@ void insertionSort(std::vector<T>& arr, const size_t size) {
 
 int main() {
     std::vector<int> array{9, -5, 1, 4, 31, -20, 8, 0};
-    const size_t arr_size = array.size();
 
     std::cout << "Not sorted array: ";
-    arrayPrint(array, arr_size);
+    arrayPrint(array);
 
-    insertionSort(array, arr_size);
+    insertionSort(array);
 
     std::cout << "Sorted array: ";
-    arrayPrint(array, arr_size);
+    arrayPrint(array);
     
     return 0;
 }
